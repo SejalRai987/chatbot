@@ -1,0 +1,20 @@
+Product: InflarEx Automation Suite
+
+Overview:
+InflarEx is a cloud-based RPA (Robotic Process Automation) tool that allows businesses to automate repetitive tasks without coding.
+
+Key Features:
+- Drag-and-drop workflow builder
+- AI-enhanced data extraction from PDFs and images
+- Multi-platform task scheduling
+- Built-in integration with over 50 popular SaaS apps (e.g., Slack, Salesforce, Google Sheets)
+
+System Requirements:
+- Supported browsers: Chrome, Firefox, Edge
+- Minimum internet speed: 10 Mbps
+- Recommended memory: 8 GB RAM
+
+Security:
+- SOC 2 compliant infrastructure
+- End-to-end AES-256 encryption
+- Role-based access controls
