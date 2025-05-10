@@ -35,3 +35,6 @@ View retrieved document chunks
 
 Get the final answer
 
+
+>For running the project write the command streamlit run main.py   
+

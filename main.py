@@ -8,6 +8,7 @@ from langchain.chains.question_answering import load_qa_chain
 import re
 import logging
 logging.basicConfig(level=logging.INFO)
+import streamlit as st
 #Load all .txt files from current folder
 def load_documents_from_folder(folder_path="."):
     docs = []
@@ -93,16 +94,27 @@ def agent_router(query: str):
 
 # CLI to ask questions 
 if __name__ == "__main__":
-    print("\U0001F4DA Inflera Knowledge Assistant (Agentic Workflow)")
-    print("Type your question or 'exit' to quit.")
+    # print("\U0001F4DA Inflera Knowledge Assistant (Agentic Workflow)")
+    # print("Type your question or 'exit' to quit.")
 
-    while True:
-        query = input("\nYour question: ")
-        if query.lower().strip() == "exit":
-            break
+    # while True:
+    #     query = input("\nYour question: ")
+    #     if query.lower().strip() == "exit":
+    #         break
 
-        response = agent_router(query)
-        print("\n🤖 Answer:\n", response)
+    #     response = agent_router(query)
+    #     print("\n🤖 Answer:\n", response)
+
+    st.set_page_config(page_title="Inflera Knowledge Assistant", layout="wide")
+    st.title("📚 Inflera Knowledge Assistant")
+
+    query = st.text_input("Ask a question:")
+
+    if query:
+        with st.spinner("Thinking..."):
+            result = agent_router(query)
+            st.markdown("### 🤖 Answer:")
+            st.write(result)
 
 # # ----------------- Document Preview -----------------
 # print(f"\u2705 Found {len(raw_documents)} documents")
